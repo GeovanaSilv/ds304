@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const path = require('path');
 
-app.use=(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));
 app.use (express.json());
 app.use(express.json({type:'application/vnd.api+json'}));
 app.use(cors());
@@ -18,4 +18,4 @@ res.sendFile(path.join(__dirname+'/index.html'));
 
 });
 
-app.listen(port,()=>console.log(`EStou escutando na porta ${port}`))
+app.listen(port,() => console.log(`EStou escutando na porta ${port}`))
